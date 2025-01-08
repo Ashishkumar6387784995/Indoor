@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Terms and Conditions</title>
+</head>
+<body>
+    <!-- The container where the HTML content will be displayed -->
+    <div id="content"></div>
+
+    <script>
+        // Escaped HTML content as a string
+        const escapedHtml = "\u003Cp\u003EHiiiii Terms conditions\u003C/p\u003E\u003Cp\u003Eupdate by Admin\u003Cbr\u003E\u003Cbr\u003E\u003Cbr\u003E\u003Cstrong\u003EAnoop\u003C/strong\u003E\u003Cbr\u003E\u003Ci\u003ENegi\u003C/i\u003E\u003Cbr\u003E\u003Cbr\u003E\u003Ci\u003Eoffice link - \u003C/i\u003E\u003Ca href=\"https://9kt.7cd.mytemp.website/\"\u003ESpato\u003C/a\u003E\u003C/p\u003E";
+
+        // Decode the escaped HTML
+        const decodedHtml = escapedHtml.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>');
+
+        // Render the HTML content into the container
+        document.getElementById("content").innerHTML = decodedHtml;
+    </script>
+</body>
+</html>
