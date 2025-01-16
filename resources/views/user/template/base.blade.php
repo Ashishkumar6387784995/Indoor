@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="{{ asset('assets/css/templatemo-space-dynamic.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/animated.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/custum.css') }}">
 
 		
   @yield('styles')
@@ -28,13 +29,13 @@
   <body>
     {{--<!-- BEGIN: Side Bar-->
     @include('user.include.sidebar')
-    <!-- END: Side Bar-->
+    <!-- END: Side Bar-->--}}
 
     <!-- BEGIN: Header-->
     @include('user.include.header')
     <!-- END: Header-->
 
-    <!-- BEGIN: Page Main-->--}}
+    <!-- BEGIN: Page Main-->
 	
 	
 	<!-- Alert Message -->

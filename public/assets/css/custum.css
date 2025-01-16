@@ -1,0 +1,45 @@
+.about-us .services .item p {
+    font-size: 12px;
+    color: #fff;
+}
+
+
+
+.our-portfolio .item:hover .hidden-content {
+    top: -180px;
+    opacity: 1;
+    padding: 20px;
+    visibility: visible;
+}
+
+
+
+.our-portfolio .hidden-content p {
+    line-height: 20px;
+    font-size: 12px;
+}
+
+
+.our-portfolio .hidden-content img,
+svg {
+    width: 45%;
+    vertical-align: middle;
+}
+
+
+.our-portfolio .hidden-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px !important;
+}
+
+
+.our-portfolio .hidden-content span {
+    cursor: pointer;
+}
+
+
+.our-portfolio .showed-content {
+    height: 175px;
+}
