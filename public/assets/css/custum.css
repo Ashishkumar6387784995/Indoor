@@ -35,8 +35,8 @@ svg {
 }
 
 
-.our-portfolio .hidden-content span {
-    cursor: pointer;
+.our-portfolio .bounceInUp {
+    cursor: pointer !important;
 }
 
 
