@@ -19,36 +19,51 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo"  style="width: 20%;">
-				<img src="{{url('assets/images/logo/logo.png')}}" alt="logo">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="{{url('/')}}" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="{{url('/about')}}">About</a></li>
-              <li class="scroll-to-section"><a href="{{url('/services')}}">Services</a></li>
-              <li class="scroll-to-section"><a href="{{url('/technologies')}}">Technologies</a></li>
-			  <li class="scroll-to-section">
-                <div class="main-red-button"><a href="#contact">Contact Us</a></div>
-              </li>
+					<a href="index.html" class="logo" style="width: 20%;">
+						<img src="{{url('assets/images/logo/logo.png')}}" alt="logo">
+					</a>
+					<!-- ***** Logo End ***** -->
+					<!-- ***** Menu Start ***** -->
+					<ul class="nav">
+						<li class="scroll-to-section">
+							<a href="{{url('/')}}" class="active">Home</a>
+						</li>
+						<li class="scroll-to-section mainmenu"><a href="#">About</a>
+							<ul class="submenu">
+								<li><a href="{{url('/about/team')}}">Overview</a></li>
+								<li><a href="{{url('/about/mission')}}">Vision</a></li>
+							</ul>
+						</li>
+						<li class="scroll-to-section"><a href="#">Services</a></li>
+						<li class="scroll-to-section mainmenu"><a href="#">Technologies</a>
+							<ul class="submenu">
+								<li><a href="{{url('/technologies/ai')}}">Oracle APEX</a></li>
+								<li><a href="{{url('/technologies/ai')}}">Database</a></li>
+								<li><a href="{{url('/technologies/ai')}}">Oracle Forms to APEX</a></li>
+								<li><a href="{{url('/technologies/ai')}}">APEX Plugins</a></li>
+								<li><a href="{{url('/technologies/ai')}}">React apps</a></li>
+								<li><a href="{{url('/technologies/ai')}}">Digital Marketing</a></li>
+							</ul>
+						</li>
+						<li class="scroll-to-section"><a href="#">Resources</a>
+							<ul class="submenu mainmenu">
+								<li><a href="{{url('/technologies/ai')}}">Ontoor Blogs</a></li>
+								<li><a href="{{url('/technologies/ai')}}">Training Program</a></li>
+							</ul>
+						</li>
+						<li class="scroll-to-section">
+							<div class="main-red-button"><a href="#contact">Contact Us</a></div>
+						</li>
+					</ul>
 
-              <!-- <li class="scroll-to-section"><a href="#about">About Us</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
-              <li class="scroll-to-section"><a href="#blog">Blog</a></li>
-              <li class="scroll-to-section"><a href="#contact">Message Us</a></li>
-              <li class="scroll-to-section">
-                <div class="main-red-button"><a href="#contact">Contact Now</a></div>
-              </li> -->
-            </ul>
-            <a class='menu-trigger'>
-              <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+
+					<a class='menu-trigger'>
+						<span>Menu</span>
+					</a>
+					<!-- ***** Menu End ***** -->
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- ***** Header Area End ***** -->
