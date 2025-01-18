@@ -1,175 +1,168 @@
-	/* General styling for navigation */
-	.nav {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	.nav>li {
-		position: relative;
-		/* Important for positioning the submenu */
-		display: inline-block;
-		/* To align items horizontally */
-		padding: 10px;
-	}
-
-	.nav a {
-		text-decoration: none;
-		padding: 10px 20px;
-		display: block;
-		color: #333;
-		font-weight: bold;
-		position: relative;
-		/* Ensure the arrow is positioned correctly */
-	}
-
-	/* Remove background color on hover */
-	.nav>li>a:hover {
-		background-color: transparent;
-		color: #333;
-		/* Optional: ensure text color stays the same on hover */
-	}
-
-	/* Add Font Awesome arrow to the main menu items */
-	.nav>li>a::after {
-		content: '';
-		position: absolute;
-		right: 10px;
-		top: 50%;
-		transform: translateY(-50%);
-		/* Center vertically */
-		font-family: "Font Awesome 5 Free";
-		/* Use Font Awesome */
-		font-weight: 900;
-		/* Ensure the icon is bold */
-		content: '\f107';
-		/* Unicode for angle-down icon */
-		font-size: 16px;
-		transition: transform 0.3s ease-in-out;
-		/* Smooth transition for the arrow */
-	}
-
-	/* Rotate arrow on hover */
-	.nav>li:hover>a::after {
-		transform: translateY(-50%) rotate(180deg);
-		/* Rotate the arrow when hovering */
-	}
-
-	.main-red-button a {
-		background-color: #ff3b30;
-		color: white;
-		padding: 12px 25px;
-		display: inline-block;
-		border-radius: 25px;
-	}
-
-	/* Hide submenu initially */
-	.submenu {
-		display: none;
-		/* Hide by default */
-		position: absolute;
-		left: 0;
-		top: 100%;
-		/* Position it below the parent */
-		background-color: #f8f8f8;
-		border-radius: 4px;
-		padding: 10px 0;
-		min-width: 200px;
-		/* Set a width for submenu */
-		animation: slideDown 0.3s ease-out;
-		/* Animation */
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	}
-
-	/* Show submenu on hover */
-	.nav>li:hover .submenu {
-		display: block;
-		/* Show submenu */
-	}
-
-	/* Animation for submenu sliding down */
-	@keyframes slideDown {
-		from {
-			opacity: 0;
-			transform: translateY(-20px);
-		}
-
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	.submenu li {
-		padding: 8px 20px;
-	}
-
-	.submenu li a {
-		color: #333;
-		text-decoration: none;
-		font-weight: normal;
-	}
-
-	/* Hover effect for submenu items */
-	.submenu li a:hover {
-		background-color: #e0e0e0;
-	}
-
-	.nav > li > a::after {
-    content: '\f107'; /* Unicode for angle-down icon */
-    font-family: "Font Awesome 5 Free"; /* Font Awesome family */
-    font-weight: 900; /* Bold weight for the icon */
-    position: absolute;
-    right: 5px;
-    top: 75%;
-    transform: translateY(-50%);
-    font-size: 16px;
-    transition: transform 0.3s ease-in-out;
+/* General styling for navigation */
+.nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
+.nav>li {
+	position: relative;
+	/* For positioning the submenu */
+	display: inline-block;
+	/* Align items horizontally */
+	padding: 10px;
+}
+
+.nav a {
+	text-decoration: none;
+	padding: 10px 20px;
+	display: block;
+	color: #333;
+	font-weight: bold;
+	position: relative;
+	/* Ensure the arrow is positioned correctly */
+}
+
+/* Hover effect for main menu links */
+.nav>li>a:hover {
+	background-color: transparent;
+	color: #333;
+}
+
+/* Add Font Awesome arrow to items with submenus */
+.nav>li:has(.submenu)>a::after {
+	content: '\f107';
+	/* Unicode for angle-down icon */
+	font-family: "Font Awesome 5 Free";
+	/* Font Awesome family */
+	font-weight: 900;
+	/* Bold weight for the icon */
+	position: absolute;
+	right: 5px;
+	top: 75%;
+	/* Center vertically */
+	transform: translateY(-50%);
+	font-size: 16px;
+	color: #666;
+	transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Rotate arrow on hover */
+.nav>li:has(.submenu):hover>a::after {
+	transform: translateY(-50%) rotate(180deg);
+	color: #ff3b30;
+}
+
+/* Main button styling */
+.main-red-button a {
+	background-color: #ff3b30;
+	color: white;
+	padding: 12px 25px;
+	display: inline-block;
+	border-radius: 25px;
+	text-align: center;
+	font-weight: bold;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.main-red-button a:hover {
+	background-color: #e32c22;
+}
+
+/* Hide submenu initially */
+.submenu {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	/* Position it below the parent */
+	background-color: #f8f8f8;
+	border-radius: 4px;
+	padding: 10px 0;
+	min-width: 200px;
+	/* Set a width for submenu */
+	animation: slideDown 0.3s ease-out;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show submenu on hover */
+.nav>li:hover .submenu {
+	display: block;
+}
+
+/* Submenu styling */
+.submenu li {
+	padding: 8px 20px;
+}
+
+.submenu li a {
+	color: #333;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+/* Hover effect for submenu items */
+.submenu li a:hover {
+	background-color: #e0e0e0;
+}
+
+/* Animation for submenu sliding down */
+@keyframes slideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* end for menu  */
 
 .about-us .services .item p {
-    font-size: 12px;
-    color: #fff;
+	font-size: 12px;
+	color: #fff;
 }
 
 
 
 .our-portfolio .item:hover .hidden-content {
-    top: -180px;
-    opacity: 1;
-    padding: 20px;
-    visibility: visible;
+	top: -180px;
+	opacity: 1;
+	padding: 20px;
+	visibility: visible;
 }
 
 
 
 .our-portfolio .hidden-content p {
-    line-height: 20px;
-    font-size: 12px;
+	line-height: 20px;
+	font-size: 12px;
 }
 
 
 .our-portfolio .hidden-content img,
 svg {
-    width: 45%;
-    vertical-align: middle;
+	width: 45%;
+	vertical-align: middle;
 }
 
 
 .our-portfolio .hidden-content h4 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 15px !important;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 15px !important;
 }
 
 
 .our-portfolio .bounceInUp {
-    cursor: pointer !important;
+	cursor: pointer !important;
 }
 
 
 .our-portfolio .showed-content {
-    height: 175px;
+	height: 175px;
 }
