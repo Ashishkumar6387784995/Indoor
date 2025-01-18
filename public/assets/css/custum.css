@@ -69,42 +69,6 @@
 	background-color: #e32c22;
 }
 
-/* Hide submenu initially */
-.submenu {
-	display: none;
-	position: absolute;
-	left: 0;
-	top: 100%;
-	/* Position it below the parent */
-	background-color: #f8f8f8;
-	border-radius: 4px;
-	padding: 10px 0;
-	min-width: 200px;
-	/* Set a width for submenu */
-	animation: slideDown 0.3s ease-out;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Show submenu on hover */
-.nav>li:hover .submenu {
-	display: block;
-}
-
-/* Submenu styling */
-.submenu li {
-	padding: 8px 20px;
-}
-
-.submenu li a {
-	color: #333;
-	text-decoration: none;
-	font-weight: normal;
-}
-
-/* Hover effect for submenu items */
-.submenu li a:hover {
-	background-color: #e0e0e0;
-}
 
 /* Animation for submenu sliding down */
 @keyframes slideDown {
@@ -117,6 +81,53 @@
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+/* Submenu styling */
+.submenu {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding: 0px;
+	min-width: 200px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+}
+
+/* Submenu <li> styling */
+.submenu li {
+    padding: 0px !important;
+	list-style: none;
+	margin: 0;
+}
+
+/* Submenu links */
+.submenu li a {
+	text-decoration: none;
+	font-size: 12px !important;
+	color: #333333;
+	font-weight: 500;
+	display: block;
+}
+
+/* Submenu <li> hover effect */
+.submenu li a:hover {
+	border-radius: 3px;
+	background-color: #03a4ed;
+	color: #fff !important;
+}
+
+/* Submenu visible on hover of parent */
+.nav>li:hover .submenu {
+	display: block;
+}
+
+/* Optional: Add a separator between submenu items */
+.submenu li+li {
+	border-top: 1px solid #eaeaea;
 }
 
 /* end for menu  */
