@@ -30,7 +30,7 @@
 						</li>
 						<li class="scroll-to-section mainmenu"><a href="#">About</a>
 							<ul class="submenu">
-								<li><a href="{{url('/about/team')}}">Overview</a></li>
+								<li><a href="{{url('/about-us')}}">Overview</a></li>
 								<li><a href="{{url('/about/mission')}}">Vision</a></li>
 							</ul>
 						</li>
