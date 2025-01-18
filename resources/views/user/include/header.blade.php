@@ -31,7 +31,7 @@
 						<li class="scroll-to-section mainmenu"><a href="#">About</a>
 							<ul class="submenu">
 								<li><a href="{{url('/about-us')}}">Overview</a></li>
-								<li><a href="{{url('/about/mission')}}">Vision</a></li>
+								<li><a href="{{url('/our-vision')}}">Vision</a></li>
 							</ul>
 						</li>
 						<li class="scroll-to-section"><a href="#">Services</a></li>

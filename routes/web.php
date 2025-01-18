@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\AboutUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,8 @@ use App\Http\Controllers\User\HomeController;
 
 
 Route::get('/', [HomeController::class, 'home']);
+
+// about page
+Route::get('/about-us', [AboutUsController::class, 'aboutUs']);
+Route::get('/our-vision', [AboutUsController::class, 'ourVision']);
 
