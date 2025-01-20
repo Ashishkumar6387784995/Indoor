@@ -8,326 +8,392 @@
 <style>
     /* Animation for pulsing effect */
     .h-svg-icon {
-      display: inline-block;
-      animation: pulse 2s infinite;
-      transition: transform 0.3s ease;
+        display: inline-block;
+        animation: pulse 2s infinite;
+        transition: transform 0.3s ease;
     }
 
     /* Keyframes for pulse animation */
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1); /* Scale up the icon */
-      }
-      100% {
-        transform: scale(1); /* Scale back to normal */
-      }
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+            /* Scale up the icon */
+        }
+
+        100% {
+            transform: scale(1);
+            /* Scale back to normal */
+        }
     }
 
     /* Stop animation on hover */
     .h-svg-icon:hover {
-      animation: none; /* Disable animation when hovering */
-      transform: scale(1); /* Ensure the icon doesn't scale when hovered */
+        animation: none;
+        /* Disable animation when hovering */
+        transform: scale(1);
+        /* Ensure the icon doesn't scale when hovered */
     }
-  </style>
+
+
+    #core-value {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .title {
+        text-align: center;
+        background-color: #ddd;
+        padding: 10px;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    #core-value .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    #core-value .grid-item {
+        background: white;
+        padding: 20px;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* Add a hover animation for grid items */
+    #core-value .grid-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    #core-value .grid-item img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    #core-value .grid-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    #core-value .grid-item p {
+        font-size: 0.90rem;
+        line-height: 1.3;
+        color: #555;
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        #core-value .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        #core-value .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
 @endsection
 
 @section('content')
 <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
+    <div class="container">
         <div class="row">
-          <div class="col-lg-6 align-self-center">
-            <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-              <h2><em>About</em> <span>Us</span></h2>
-              <p>
-                Ontoor Solutions is a software development company that specializes in Oracle APEX, Oracle Database, and
-                Oracle technologies. We provide development, migration, and consulting services to help businesses
-                modernize their legacy systems and improve their operational efficiency. Our team of highly skilled
-                professionals is committed to delivering high-quality software solutions that meet our clients’ unique
-                needs and requirements.
-              </p>
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                            <h2><em>About</em> <span>Us</span></h2>
+                            <p>
+                                Ontoor Solutions is a software development company that specializes in Oracle APEX, Oracle Database, and
+                                Oracle technologies. We provide development, migration, and consulting services to help businesses
+                                modernize their legacy systems and improve their operational efficiency. Our team of highly skilled
+                                professionals is committed to delivering high-quality software solutions that meet our clients’ unique
+                                needs and requirements.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <img src="{{ asset('assets/images/custom/Ontoor-Logo.png') }}" alt="team meeting" style="width: 70%; padding-left: 20%;">
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-              <img src="{{ asset('assets/images/custom/Ontoor-Logo.png') }}" alt="team meeting" style="width: 70%; padding-left: 20%;">
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 
-
-<div id="services" class="our-services section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-        <div class="left-image">
-          <img src="assets/images/services-left-image.png" alt="">
-        </div>
-      </div>
-      <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
-        <div class="section-heading">
-          <h2>Grow your website with our <em>SEO</em> service &amp; <span>Project</span> Ideas</h2>
-          <p>Space Dynamic HTML5 template is free to use for your website projects. However, you are not permitted to
-            redistribute the template ZIP file on any CSS template collection websites. Please contact us for more
-            information. Thank you for your kind cooperation.</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="first-bar progress-skill-bar">
-              <h4>Website Analysis</h4>
-              <span>84%</span>
-              <div class="filled-bar"></div>
-              <div class="full-bar"></div>
+<div id="core-value" class="container wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="our-portfolio section" data-wow-duration="1s" data-wow-delay="0.5s" style="padding: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <h2 style="margin-bottom: 20px;"><em>Core</em> <span>Values</span></h2>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-12">
-            <div class="second-bar progress-skill-bar">
-              <h4>SEO Reports</h4>
-              <span>88%</span>
-              <div class="filled-bar"></div>
-              <div class="full-bar"></div>
-            </div>
-          </div>
-          <div class="col-lg-12">
-            <div class="third-bar progress-skill-bar">
-              <h4>Page Optimizations</h4>
-              <span>94%</span>
-              <div class="filled-bar"></div>
-              <div class="full-bar"></div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
-
-<div id="portfolio" class="our-portfolio section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 offset-lg-3">
-        <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-          <h2>See Our <em>Secret</em> To <span>Success</span></h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-3 col-sm-6">
-        <span>
-          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-            <div class="hidden-content">
-              <h4>Exceptional Technical Expertise</h4>
-              <p>Our team comprises highly skilled and knowledgeable professionals who are experts in the latest programming languages, tools, and technologies. We continually invest in our team’s growth to ensure they stay at the forefront of innovation.</p>
-            </div>
-            <div class="showed-content">
-              <!-- <img src="assets/images/portfolio-image.png" alt=""> -->
-              <span class="h-svg-icon h-icon__icon style-226-icon style-local-1491-c50-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="code" viewBox="0 0 1920 1896.0833">
-                  <path d="M617 1399l-50 50q-10 10-23 10t-23-10L55 983q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23L224 960l393 393q10 10 10 23t-10 23zm591-1067L835 1623q-4 13-15.5 19.5T796 1645l-62-17q-13-4-19.5-15.5T712 1588l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z" fill="#03a4ed"></path>
+    <div class="grid">
+        <div class="grid-item">
+            <span class="h-svg-icon h-icon__icon style-837-icon style-local-2637-c14-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="search" viewBox="0 0 1672.2646 1896.0833">
+                    <path d="M1152 832q0-185-131.5-316.5T704 384 387.5 515.5 256 832t131.5 316.5T704 1280t316.5-131.5T1152 832zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225T0 832t55.5-273.5 150-225 225-150T704 128t273.5 55.5 225 150 150 225T1408 832q0 220-124 399l343 343q37 37 37 90z" fill="#03a4ed"></path>
                 </svg>
-              </span>
-            </div>
-          </div>
-        </span>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <span>
+            </span>
+            <h3>QUALITY</h3>
+            <p>A commitment to delivering high-quality software solutions that meet or exceed customer expectations. This includes thorough testing, code reviews, and continuous improvement of development processes.</p>
+        </div>
 
-          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-            <div class="hidden-content">
-              <h4>Effective Project Management</h4>
-              <p>We follow proven project management methodologies, such as Agile and Scrum, to ensure that every project we undertake is executed efficiently and delivered on time and within budget. Clear communication with our clients is at the heart of our project success.</p>
-            </div>
-            <div class="showed-content">
-              <!-- <img src="assets/images/portfolio-image.png" alt=""> -->
-              <span class="h-svg-icon h-icon__icon style-226-icon style-local-1491-c54-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="line-chart" viewBox="0 0 2048 1896.0833">
-                  <path d="M2048 1536v128H0V128h128v1408h1920zM1920 288v435q0 21-19.5 29.5T1865 745l-121-121-633 633q-10 10-23 10t-23-10l-233-233-416 416-192-192 585-585q10-10 23-10t23 10l233 233 464-464-121-121q-16-16-7.5-35.5T1453 256h435q14 0 23 9t9 23z" fill="#03a4ed"></path>
+        <div class="grid-item">
+            <span class="h-svg-icon h-icon__icon style-837-icon style-local-2637-c18-icon"><!--Icon by Icons8 Line Awesome (https://icons8.com/line-awesome)--><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="lightbulb-o" viewBox="0 0 512 545.5">
+                    <path d="M109 70.5l33.5 33.5-22.5 22.5L86.5 93zm294 0L425.5 93 392 126.5 369.5 104zm-147 10c78.95-.75 144 64.436 144 143.5 0 43.29-19.986 80.986-46.5 107.5-19.81 18.394-32 42.033-32 65.5v19H320v64h-36.5c-5.553 9.55-15.715 16-27.5 16s-21.947-6.45-27.5-16H192v-96c-3.24-17.87-12.705-35.39-28-48.5-35.727-30.368-57.17-77.527-50-129.5 8.977-64.628 60.63-117.062 125.5-124.5.174-.02.326.02.5 0 5.37-.652 10.736-.95 16-1zm0 32c-4.122.06-8.285.473-12.5 1-50.102 5.566-91 46.09-98 96.5-5.63 40.827 11.227 76.97 39.5 101 22.21 19.038 33.99 45.573 37.5 73h70c3.768-28.672 17.507-54.937 39-75l-.5-.5c21.486-21.486 37-50.99 37-84.5 0-61.776-50.164-112.378-112-111.5zM32 224h48v32H32v-32zm400 0h48v32h-48v-32zM120 353.5l22.5 22.5-33.5 33.5L86.5 387zm272 0l33.5 33.5-22.5 22.5-33.5-33.5zM224 416v32h64v-32h-64z" fill="#03a4ed"></path>
+                </svg>
+            </span>
+            <h3>INNOVATION</h3>
+            <p>Encouraging creative thinking, staying up-to-date with the latest technologies, and fostering a culture of innovation to solve complex problems and improve products.</p>
+        </div>
+
+        <div class="grid-item">
+            <span class="h-svg-icon h-icon__icon style-837-icon style-local-2637-c22-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="user-secret" viewBox="0 0 1536 1896.0833">
+                    <path d="M576 1536l96-448-96-128-128-64zm256 0l128-640-128 64-96 128zM992 526q-2-4-4-6-10-8-96-8-70 0-167 19-7 2-21 2t-21-2q-97-19-167-19-86 0-96 8-2 2-4 6 2 18 4 27 2 3 7.5 6.5T435 570q2 4 7.5 20.5t7 20.5 7.5 17 8.5 17 9 14 12 13.5 14 9.5 17.5 8 20.5 4 24.5 2q36 0 59-12.5t32.5-30T669 619t11.5-29.5T698 577h12q11 0 17.5 12.5T739 619t14.5 34.5 32.5 30 59 12.5q13 0 24.5-2t20.5-4 17.5-8 14-9.5 12-13.5 9-14 8.5-17 7.5-17 7-20.5T973 570q2-7 7.5-10.5t7.5-6.5q2-9 4-27zm416 879q0 121-73 190t-194 69H267q-121 0-194-69T0 1405q0-61 4.5-118t19-125.5T61 1038t63.5-103.5T218 860l-90-220h214q-22-64-22-128 0-12 2-32-194-40-194-96 0-57 210-99 17-62 51.5-134T460 37q32-37 76-37 30 0 84 31t84 31 84-31 84-31q44 0 76 37 36 42 70.5 114t51.5 134q210 42 210 99 0 56-194 96 7 81-20 160h214l-82 225q63 33 107.5 96.5T1371 1105t29 151.5 8 148.5z" fill="#03a4ed"></path>
+                </svg>
+            </span>
+            <h3>CUSTOMER-CENTRIC</h3>
+            <p>Putting the customer at the center of all decisions and actions, striving to understand their needs, and delivering solutions that provide value and satisfaction.</p>
+        </div>
+
+        <div class="grid-item">
+            <span class="h-svg-icon h-icon__icon style-837-icon style-local-2637-c26-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="retweet" viewBox="0 0 1920 1896.0833">
+                    <path d="M1280 1504q0 13-9.5 22.5t-22.5 9.5H288q-8 0-13.5-2t-9-7-5.5-8-3-11.5-1-11.5V896H64q-26 0-45-19T0 832q0-24 15-41l320-384q19-22 49-22t49 22l320 384q15 17 15 41 0 26-19 45t-45 19H512v384h576q16 0 25 11l160 192q7 10 7 21zm640-416q0 24-15 41l-320 384q-20 23-49 23t-49-23l-320-384q-15-17-15-41 0-26 19-45t45-19h192V640H832q-16 0-25-12L647 436q-7-9-7-20 0-13 9.5-22.5T672 384h960q8 0 13.5 2t9 7 5.5 8 3 11.5 1 11.5v600h192q26 0 45 19t19 45z" fill="#03a4ed"></path>
+                </svg>
+            </span>
+            <h3>TEAMWORK</h3>
+            <p>Promoting collaboration, communication, and mutual support among team members. Recognizing that great software is often the result of effective teamwork.</p>
+        </div>
+
+        <div class="grid-item">
+            <span class="h-svg-icon h-icon__icon style-837-icon style-local-2637-c30-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="paper-plane" viewBox="0 0 1792.0013 1896.0833">
+                    <path d="M1764 11q33 24 27 64l-256 1536q-5 29-32 45-14 8-31 8-11 0-24-5l-453-185-242 295q-18 23-49 23-13 0-22-4-19-7-30.5-23.5T640 1728v-349l864-1059-1069 925-395-162q-37-14-40-55-2-40 32-59L1696 9q15-9 32-9 20 0 36 11z" fill="#03a4ed"></path>
+                </svg>
+            </span>
+            <h3>ADAPTABILITY</h3>
+            <p>Embracing change and being flexible in response to evolving technologies, market dynamics, and customer requirements.</p>
+        </div>
+
+        <div class="grid-item">
+            <span class="h-svg-icon h-icon__icon style-842-icon style-local-2637-c34-icon"><!--Icon by Icons8 Line Awesome (https://icons8.com/line-awesome)--><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="gears" viewBox="0 0 512 545.5">
+                    <path d="M344 72h32v22.5c13.256 2.334 25.375 7.58 36 15l15-15 22.5 22.5-15 15c7.42 10.625 12.666 22.744 15 36H472v32h-22.5c-2.357 13.388-7.46 25.802-15 36.5L450 253l-23.5 22-15-16c-10.494 7.212-22.48 12.208-35.5 14.5V296h-32v-22.5c-13.256-2.334-25.375-7.58-36-15l-16.5 17-23-23 17-16.5c-7.42-10.625-12.666-22.744-15-36H248v-32h22.5c2.292-13.02 7.288-25.006 14.5-35.5l-16-15L291 94l16.5 15.5c10.698-7.54 23.112-12.643 36.5-15V72zm16 53c-32.885 0-59 26.115-59 59s26.115 59 59 59 59-26.115 59-59-26.115-59-59-59zm-207.5 94.5l11.5 29c8.477-2.118 17.388-3.5 26.5-3.5 9.13 0 18.015 1.362 26.5 3.5l11.5-29 29.5 12-11.5 29c15.108 9.133 27.874 21.944 37 37l29-11.5 12 29.5-29 11.5c2.118 8.458 3.5 17.388 3.5 26.5s-1.382 18.023-3.5 26.5l29 11.5-12 29.5-29-11.5c-9.107 15.23-21.88 28.264-37 37.5l11.5 28.5-29.5 12L217 459c-8.458 2.138-17.388 3.5-26.5 3.5-9.166 0-17.972-1.345-26.5-3.5l-11.5 28.5-29.5-12 11.5-28.5c-15.37-9.23-28.246-22.145-37.5-37.5L68.5 421l-12-29.5L85 380c-2.138-8.477-3.5-17.388-3.5-26.5s1.362-18.042 3.5-26.5l-28.5-11.5 12-29.5L97 297.5c9.236-15.12 22.27-27.893 37.5-37l-11.5-29zm38 57.5c-42.605 0-77 33.895-77 76.5s34.395 77 77 77 76.5-34.395 76.5-77-33.895-76.5-76.5-76.5z" fill="#03a4ed"></path>
                 </svg></span>
-            </div>
-          </div>
-        </span>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <span>
-          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-            <div class="hidden-content">
-              <h4>Quality Assurance and Testing </h4>
-              <p>We have an unwavering commitment to delivering software of the highest quality. Rigorous testing processes, including automated testing, ensure that our solutions are reliable, secure, and free from bugs.</p>
-            </div>
-            <div class="showed-content">
-              <!-- <img src="assets/images/portfolio-image.png" alt=""> -->
-              <span class="h-svg-icon h-icon__icon style-226-icon style-local-1491-c58-icon"><!--Icon by Icons8 Line Awesome (https://icons8.com/line-awesome)--><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="question-circle" viewBox="0 0 512 545.5">
-                  <path d="M256 96c105.85 0 192 86.15 192 192s-86.15 192-192 192S64 393.85 64 288 150.15 96 256 96zm0 32c-88.555 0-160 71.445-160 160s71.445 160 160 160 160-71.445 160-160-71.445-160-160-160zm0 64c35.157 0 64 28.843 64 64 0 25.93-16.884 49.31-41.5 57.5l-6.5 2V336h-32v-20.5c0-13.702 8.96-26.164 22-30.5l6.5-2c11.64-3.873 19.5-14.722 19.5-27 0-17.866-14.134-32-32-32s-32 14.134-32 32h-32c0-35.157 28.843-64 64-64zm-16 160h32v32h-32v-32z" fill="#03a4ed"></path>
-                </svg></span>
-            </div>
-          </div>
-        </span>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <span>
-          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-            <div class="hidden-content">
-              <h4>Client-Centric Approach</h4>
-              <p>Our clients are our top priority. We take the time to understand their unique needs, challenges, and objectives. By consistently delivering value, providing exceptional customer service, and addressing feedback promptly, we build lasting client relationships.</p>
-            </div>
-            <div class="showed-content">
-              <!-- <img src="assets/images/portfolio-image.png" alt=""> -->
-              <span class="h-svg-icon h-icon__icon style-226-icon style-local-1491-c62-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="handshake-o" viewBox="0 0 2304 1896.0833">
-                  <path d="M192 1152q40 0 56-32t0-64-56-32-56 32 0 64 56 32zm1473-58q-10-13-38.5-50t-41.5-54-38-49-42.5-53-40.5-47-45-49l-125 140q-83 94-208.5 92T880 926q-57-69-56.5-158T882 611l177-206q-22-11-51-16.5t-47.5-6-56.5.5-49 1q-92 0-158 66L539 608H384v544q5 0 21-.5t22 0 19.5 2 20.5 4.5 17.5 8.5T503 1180l297 292q115 111 227 111 78 0 125-47 57 20 112.5-8t72.5-85q74 6 127-44 20-18 36-45.5t14-50.5q10 10 43 10 43 0 77-21t49.5-53 12-71.5-30.5-73.5zm159 58h96V640h-93l-157-180q-66-76-169-76h-167q-89 0-146 67L979 694q-28 33-28 75t27 75q43 51 110 52t111-49l193-218q25-23 53.5-21.5t47 27 8.5 56.5q16 19 56 63t60 68q29 36 82.5 105.5t64.5 84.5q52 66 60 140zm288 0q40 0 56-32t0-64-56-32-56 32 0 64 56 32zm192-576v640q0 26-19 45t-45 19h-434q-27 65-82 106.5t-125 51.5q-33 48-80.5 81.5T1416 1565q-42 53-104.5 81.5T1183 1671q-60 34-126 39.5t-127.5-14-117-53.5-103.5-81l-287-282H64q-26 0-45-19t-19-45V544q0-26 19-45t45-19h421q14-14 47-48t47.5-48 44-40 50.5-37.5 51-25.5 62-19.5 68-5.5h117q99 0 181 56 82-56 181-56h167q35 0 67 6t56.5 14.5T1676 303t44.5 31 43 39.5 39 42 41 48T1885 512h355q26 0 45 19t19 45z" fill="#03a4ed"></path>
-                </svg></span>
-            </div>
-          </div>
-        </span>
-      </div>
+            <h3>AGILITY</h3>
+            <p>Embracing agile methodologies or other flexible development approaches to respond quickly to changing project requirements and customer feedback.</p>
+        </div>
+
+        <div class="grid-item">
+            <span class="h-svg-icon h-icon__icon style-846-icon style-local-2637-c38-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="users" viewBox="0 0 1920 1896.0833">
+                    <path d="M593 896q-162 5-265 128H194q-82 0-138-40.5T0 865q0-353 124-353 6 0 43.5 21t97.5 42.5T384 597q67 0 133-23-5 37-5 66 0 139 81 256zm1071 637q0 120-73 189.5t-194 69.5H523q-121 0-194-69.5T256 1533q0-53 3.5-103.5t14-109T300 1212t43-97.5 62-81 85.5-53.5T602 960q10 0 43 21.5t73 48 107 48 135 21.5 135-21.5 107-48 73-48 43-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zM640 256q0 106-75 181t-181 75-181-75-75-181 75-181T384 0t181 75 75 181zm704 384q0 159-112.5 271.5T960 1024 688.5 911.5 576 640t112.5-271.5T960 256t271.5 112.5T1344 640zm576 225q0 78-56 118.5t-138 40.5h-134q-103-123-265-128 81-117 81-256 0-29-5-66 66 23 133 23 59 0 119-21.5t97.5-42.5 43.5-21q124 0 124 353zm-128-609q0 106-75 181t-181 75-181-75-75-181 75-181 181-75 181 75 75 181z" fill="#03a4ed"></path>
+                </svg>
+            </span>
+            <h3>COMMUNITY ENGAGEMENT</h3>
+            <p>Actively participating in the software development community, contributing to open-source projects, and giving back to society through philanthropy or volunteer work.</p>
+        </div>
+        
+        <div class="grid-item">
+            <img src="sustainability-icon.png" alt="Sustainability Icon">
+            <h3>SUSTAINABILITY</h3>
+            <p>Considering the environmental and social impact of software development practices and striving for sustainability in processes and products.</p>
+        </div>
     </div>
-  </div>
+</div>
+
+
+
+<div class="our-portfolio section" data-wow-duration="1s" data-wow-delay="0.5s" style="padding: 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <h2 style="margin-bottom: 20px;"><em>Meet</em> The <span>Team</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+    <a href="https://www.linkedin.com/in/ashish-sahay-the-apexian/" target="_blank" h-use-smooth-scroll="true" class="image-link" rel="noopener">
+        <img fetchpriority="high" decoding="async" width="1920" height="550px" src="https://ontoorsolutions.com/wp-content/uploads/2024/07/Teams-profile-1.png" class="wp-image-3864 style-1012-image style-local-2637-c51-image" alt="Team Pic">
+    </a>
 </div>
 
 <div id="blog" class="our-blog section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-        <div class="section-heading">
-          <h2>Check Out What Is <em>Trending</em> In Our Latest <span>News</span></h2>
-        </div>
-      </div>
-      <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-        <div class="top-dec">
-          <img src="assets/images/blog-dec.png" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-        <div class="left-image">
-          <a href="#"><img src="assets/images/big-blog-thumb.jpg" alt="Workspace Desktop"></a>
-          <div class="info">
-            <div class="inner-content">
-              <ul>
-                <li><i class="fa fa-calendar"></i> 24 Mar 2021</li>
-                <li><i class="fa fa-users"></i> TemplateMo</li>
-                <li><i class="fa fa-folder"></i> Branding</li>
-              </ul>
-              <a href="#">
-                <h4>SEO Agency &amp; Digital Marketing</h4>
-              </a>
-              <p>Lorem ipsum dolor sit amet, consectetur and sed doer ket eismod tempor incididunt ut labore et dolore
-                magna...</p>
-              <div class="main-blue-button">
-                <a href="#">Discover More</a>
-              </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+                <div class="section-heading">
+                    <h2>Check Out What Is <em>Trending</em> In Our Latest <span>News</span></h2>
+                </div>
             </div>
-          </div>
+            <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+                <div class="top-dec">
+                    <img src="assets/images/blog-dec.png" alt="">
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-        <div class="right-list">
-          <ul>
-            <li>
-              <div class="left-content align-self-center">
-                <span><i class="fa fa-calendar"></i> 18 Mar 2021</span>
-                <a href="#">
-                  <h4>New Websites &amp; Backlinks</h4>
-                </a>
-                <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-              </div>
-              <div class="right-image">
-                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-              </div>
-            </li>
-            <li>
-              <div class="left-content align-self-center">
-                <span><i class="fa fa-calendar"></i> 14 Mar 2021</span>
-                <a href="#">
-                  <h4>SEO Analysis &amp; Content Ideas</h4>
-                </a>
-                <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-              </div>
-              <div class="right-image">
-                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-              </div>
-            </li>
-            <li>
-              <div class="left-content align-self-center">
-                <span><i class="fa fa-calendar"></i> 06 Mar 2021</span>
-                <a href="#">
-                  <h4>SEO Tips &amp; Digital Marketing</h4>
-                </a>
-                <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-              </div>
-              <div class="right-image">
-                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-              </div>
-            </li>
-          </ul>
+        <div class="row">
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+                <div class="left-image">
+                    <a href="#"><img src="assets/images/big-blog-thumb.jpg" alt="Workspace Desktop"></a>
+                    <div class="info">
+                        <div class="inner-content">
+                            <ul>
+                                <li><i class="fa fa-calendar"></i> 24 Mar 2021</li>
+                                <li><i class="fa fa-users"></i> TemplateMo</li>
+                                <li><i class="fa fa-folder"></i> Branding</li>
+                            </ul>
+                            <a href="#">
+                                <h4>SEO Agency &amp; Digital Marketing</h4>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet, consectetur and sed doer ket eismod tempor incididunt ut labore et dolore
+                                magna...</p>
+                            <div class="main-blue-button">
+                                <a href="#">Discover More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+                <div class="right-list">
+                    <ul>
+                        <li>
+                            <div class="left-content align-self-center">
+                                <span><i class="fa fa-calendar"></i> 18 Mar 2021</span>
+                                <a href="#">
+                                    <h4>New Websites &amp; Backlinks</h4>
+                                </a>
+                                <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+                            </div>
+                            <div class="right-image">
+                                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-content align-self-center">
+                                <span><i class="fa fa-calendar"></i> 14 Mar 2021</span>
+                                <a href="#">
+                                    <h4>SEO Analysis &amp; Content Ideas</h4>
+                                </a>
+                                <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+                            </div>
+                            <div class="right-image">
+                                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-content align-self-center">
+                                <span><i class="fa fa-calendar"></i> 06 Mar 2021</span>
+                                <a href="#">
+                                    <h4>SEO Tips &amp; Digital Marketing</h4>
+                                </a>
+                                <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
+                            </div>
+                            <div class="right-image">
+                                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 <div id="contact" class="contact-us section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
-        <div class="section-heading">
-          <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer ket eismod tempor incididunt ut labore
-            et dolores</p>
-          <div class="phone-info">
-            <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="#">010-020-0340</a></span></h4>
-          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
+                <div class="section-heading">
+                    <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer ket eismod tempor incididunt ut labore
+                        et dolores</p>
+                    <div class="phone-info">
+                        <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="#">010-020-0340</a></span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
+                <form id="contact" action="" method="post">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
+                                    required="">
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <textarea name="message" type="text" class="form-control" id="message" placeholder="Message"
+                                    required=""></textarea>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <button type="submit" id="form-submit" class="main-button ">Send Message</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="contact-dec">
+                        <img src="assets/images/contact-decoration.png" alt="">
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-        <form id="contact" action="" method="post">
-          <div class="row">
-            <div class="col-lg-6">
-              <fieldset>
-                <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-              </fieldset>
-            </div>
-            <div class="col-lg-6">
-              <fieldset>
-                <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
-              </fieldset>
-            </div>
-            <div class="col-lg-12">
-              <fieldset>
-                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
-                  required="">
-              </fieldset>
-            </div>
-            <div class="col-lg-12">
-              <fieldset>
-                <textarea name="message" type="text" class="form-control" id="message" placeholder="Message"
-                  required=""></textarea>
-              </fieldset>
-            </div>
-            <div class="col-lg-12">
-              <fieldset>
-                <button type="submit" id="form-submit" class="main-button ">Send Message</button>
-              </fieldset>
-            </div>
-          </div>
-          <div class="contact-dec">
-            <img src="assets/images/contact-decoration.png" alt="">
-          </div>
-        </form>
-      </div>
     </div>
-  </div>
 </div>
 @endsection
 
