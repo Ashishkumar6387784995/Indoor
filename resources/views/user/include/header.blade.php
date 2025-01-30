@@ -19,7 +19,7 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-					<a href="index.html" class="logo" style="width: 20%;">
+					<a href="index.html" class="logo" style="width: 20%; margin-top: px;">
 						<img src="{{url('assets/images/logo/logo.png')}}" alt="logo">
 					</a>
 					<!-- ***** Logo End ***** -->
@@ -51,7 +51,7 @@
 								<li><a href="{{url('/technologies/ai')}}">Training Program</a></li>
 							</ul>
 						</li>
-						<li class="scroll-to-section">
+						<li class="scroll-to-section" style="padding-top: 16px;">
 							<div class="main-red-button"><a href="#contact">Contact Us</a></div>
 						</li>
 					</ul>

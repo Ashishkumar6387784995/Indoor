@@ -175,5 +175,9 @@ svg {
 
 
 .our-portfolio .showed-content {
-	height: 175px;
+	height: 190px;
+}
+
+.our-portfolio p {
+	width: 115%;
 }

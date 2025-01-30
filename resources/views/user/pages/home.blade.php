@@ -44,10 +44,11 @@
             <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
               <h6>Welcome to Ontoor Solutions</h6>
               <h2>We <em>Transforming Ideas</em> <span>into</span> Code</h2>
-              <p>Ontoor Solutions is a professional looking HTML template using a Bootstrap 5 (beta 2). This CSS template
+              <!-- <p>Ontoor Solutions is a professional looking HTML template using a Bootstrap 5 (beta 2). This CSS template
                 is free for you provided by <a rel="nofollow" href="https://templatemo.com/page/1"
-                  target="_parent">TemplateMo</a>.</p>
-              <form id="search" action="#" method="GET">
+                  target="_parent">TemplateMo</a>.
+              </p> -->
+              <!-- <form id="search" action="#" method="GET">
                 <fieldset>
                   <input type="address" name="address" class="email" placeholder="Your website URL..."
                     autocomplete="on" required>
@@ -55,7 +56,7 @@
                 <fieldset>
                   <button type="submit" class="main-button">Analyze Site</button>
                 </fieldset>
-              </form>
+              </form> -->
             </div>
           </div>
           <div class="col-lg-6">
@@ -194,13 +195,14 @@
               <h4>Exceptional Technical Expertise</h4>
               <p>Our team comprises highly skilled and knowledgeable professionals who are experts in the latest programming languages, tools, and technologies. We continually invest in our team’s growth to ensure they stay at the forefront of innovation.</p>
             </div>
-            <div class="showed-content">
+            <div class="showed-content" style="padding-top: 40px;">
               <!-- <img src="assets/images/portfolio-image.png" alt=""> -->
               <span class="h-svg-icon h-icon__icon style-226-icon style-local-1491-c50-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="code" viewBox="0 0 1920 1896.0833">
                   <path d="M617 1399l-50 50q-10 10-23 10t-23-10L55 983q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23L224 960l393 393q10 10 10 23t-10 23zm591-1067L835 1623q-4 13-15.5 19.5T796 1645l-62-17q-13-4-19.5-15.5T712 1588l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z" fill="#03a4ed"></path>
                 </svg>
               </span>
+              <p>Exceptional Technical Expertise</p>
             </div>
           </div>
         </span>
@@ -213,12 +215,14 @@
               <h4>Effective Project Management</h4>
               <p>We follow proven project management methodologies, such as Agile and Scrum, to ensure that every project we undertake is executed efficiently and delivered on time and within budget. Clear communication with our clients is at the heart of our project success.</p>
             </div>
-            <div class="showed-content">
+            <div class="showed-content" style="padding-top: 45px;">
               <!-- <img src="assets/images/portfolio-image.png" alt=""> -->
               <span class="h-svg-icon h-icon__icon style-226-icon style-local-1491-c54-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="line-chart" viewBox="0 0 2048 1896.0833">
                   <path d="M2048 1536v128H0V128h128v1408h1920zM1920 288v435q0 21-19.5 29.5T1865 745l-121-121-633 633q-10 10-23 10t-23-10l-233-233-416 416-192-192 585-585q10-10 23-10t23 10l233 233 464-464-121-121q-16-16-7.5-35.5T1453 256h435q14 0 23 9t9 23z" fill="#03a4ed"></path>
-                </svg></span>
+                </svg>
+              </span>
+              <p>Effective Project Management</p>
             </div>
           </div>
         </span>
@@ -230,11 +234,13 @@
               <h4>Quality Assurance and Testing </h4>
               <p>We have an unwavering commitment to delivering software of the highest quality. Rigorous testing processes, including automated testing, ensure that our solutions are reliable, secure, and free from bugs.</p>
             </div>
-            <div class="showed-content">
+            <div class="showed-content" style="padding-top: 30px;">
               <!-- <img src="assets/images/portfolio-image.png" alt=""> -->
               <span class="h-svg-icon h-icon__icon style-226-icon style-local-1491-c58-icon"><!--Icon by Icons8 Line Awesome (https://icons8.com/line-awesome)--><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="question-circle" viewBox="0 0 512 545.5">
                   <path d="M256 96c105.85 0 192 86.15 192 192s-86.15 192-192 192S64 393.85 64 288 150.15 96 256 96zm0 32c-88.555 0-160 71.445-160 160s71.445 160 160 160 160-71.445 160-160-71.445-160-160-160zm0 64c35.157 0 64 28.843 64 64 0 25.93-16.884 49.31-41.5 57.5l-6.5 2V336h-32v-20.5c0-13.702 8.96-26.164 22-30.5l6.5-2c11.64-3.873 19.5-14.722 19.5-27 0-17.866-14.134-32-32-32s-32 14.134-32 32h-32c0-35.157 28.843-64 64-64zm-16 160h32v32h-32v-32z" fill="#03a4ed"></path>
-                </svg></span>
+                </svg>
+              </span>
+              <p>Quality Assurance and Testing</p>
             </div>
           </div>
         </span>
@@ -246,12 +252,14 @@
               <h4>Client-Centric Approach</h4>
               <p>Our clients are our top priority. We take the time to understand their unique needs, challenges, and objectives. By consistently delivering value, providing exceptional customer service, and addressing feedback promptly, we build lasting client relationships.</p>
             </div>
-            <div class="showed-content">
+            <div class="showed-content" style="padding-top: 53px;"  >
               <!-- <img src="assets/images/portfolio-image.png" alt=""> -->
               <span class="h-svg-icon h-icon__icon style-226-icon style-local-1491-c62-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="handshake-o" viewBox="0 0 2304 1896.0833">
                   <path d="M192 1152q40 0 56-32t0-64-56-32-56 32 0 64 56 32zm1473-58q-10-13-38.5-50t-41.5-54-38-49-42.5-53-40.5-47-45-49l-125 140q-83 94-208.5 92T880 926q-57-69-56.5-158T882 611l177-206q-22-11-51-16.5t-47.5-6-56.5.5-49 1q-92 0-158 66L539 608H384v544q5 0 21-.5t22 0 19.5 2 20.5 4.5 17.5 8.5T503 1180l297 292q115 111 227 111 78 0 125-47 57 20 112.5-8t72.5-85q74 6 127-44 20-18 36-45.5t14-50.5q10 10 43 10 43 0 77-21t49.5-53 12-71.5-30.5-73.5zm159 58h96V640h-93l-157-180q-66-76-169-76h-167q-89 0-146 67L979 694q-28 33-28 75t27 75q43 51 110 52t111-49l193-218q25-23 53.5-21.5t47 27 8.5 56.5q16 19 56 63t60 68q29 36 82.5 105.5t64.5 84.5q52 66 60 140zm288 0q40 0 56-32t0-64-56-32-56 32 0 64 56 32zm192-576v640q0 26-19 45t-45 19h-434q-27 65-82 106.5t-125 51.5q-33 48-80.5 81.5T1416 1565q-42 53-104.5 81.5T1183 1671q-60 34-126 39.5t-127.5-14-117-53.5-103.5-81l-287-282H64q-26 0-45-19t-19-45V544q0-26 19-45t45-19h421q14-14 47-48t47.5-48 44-40 50.5-37.5 51-25.5 62-19.5 68-5.5h117q99 0 181 56 82-56 181-56h167q35 0 67 6t56.5 14.5T1676 303t44.5 31 43 39.5 39 42 41 48T1885 512h355q26 0 45 19t19 45z" fill="#03a4ed"></path>
-                </svg></span>
+                </svg>
+              </span>
+              <p>Client-Centric Approach</p>
             </div>
           </div>
         </span>
