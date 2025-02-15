@@ -181,3 +181,10 @@ svg {
 .our-portfolio p {
 	width: 115%;
 }
+
+
+.mainmenu li a {
+    color: #fff !important;
+    padding: 0px 20px !important;
+    font-weight: 400 !important;
+}

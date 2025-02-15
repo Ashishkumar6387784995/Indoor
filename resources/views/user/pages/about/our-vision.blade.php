@@ -1,99 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Core Values</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+@extends('user.template.base')
 
-        #core-value {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+@section('title')
+<title>Ontoor Solutions: Our Visio Page</title>
+@endsection
 
-        .title {
-            text-align: center;
-            background-color: #ddd;
-            padding: 10px;
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
+@section('styles')
+@endsection
 
-        #core-value .grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
+@section('content')
+<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                            <h2><em>Our</em> <span>Vision</span></h2>
+                            <p>
+                                At Ontoor Solutions, our vision is to empower individuals and organisations through innovative IT solutions and comprehensive training programs. We aim to bridge the gap between technology and talent by providing cutting-edge tools and knowledge that foster growth and excellence. Our commitment is to create a community where aspiring developers can thrive, businesses can flourish, and the future of technology is shaped by creativity, expertise, and collaboration.                             
+                            </p>
 
-        #core-value .grid-item {
-            background: white;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
+                            <p>
+                                We envision a world where technology is not just a tool, but a catalyst for transformation. By harnessing the power of Oracle APEX, Oracle Database, and other advanced technologies, we strive to deliver solutions that drive efficiency, innovation, and success. Our training programs are designed to equip the next generation of IT professionals with the skills and confidence to tackle real-world challenges and lead the industry forward.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <img src="{{ asset('assets/images/custom/our-vision.jpeg') }}" alt="our vision" style="width: 80%;">
+                        </div>
+                    </div>
+                </div>
 
-        /* Add a hover animation for grid items */
-        #core-value .grid-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
+                <p style="text-align: center; padding:0% 15%;">Join us on this journey to redefine the future of IT, where every individual is empowered, every business is optimised, and every challenge is an opportunity for growth.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-        #core-value .grid-item img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 15px;
-        }
+@endsection
 
-        #core-value .grid-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        #core-value .grid-item p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            #core-value .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            #core-value .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-
-</body>
-</html>
+@section('scripts')
+@endsection

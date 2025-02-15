@@ -1,7 +1,7 @@
 @extends('user.template.base')
 
 @section('title')
-<title>Ontoor Solutions: Home Page</title>
+<title>Ontoor Solutions: About Us Page</title>
 @endsection
 
 @section('styles')
@@ -119,6 +119,11 @@
             grid-template-columns: 1fr;
         }
     }
+
+    .grid .grid-item svg {
+        width: 25%;
+        vertical-align: middle;
+    }
 </style>
 @endsection
 
@@ -233,7 +238,11 @@
         </div>
         
         <div class="grid-item">
-            <img src="sustainability-icon.png" alt="Sustainability Icon">
+            <span class="h-svg-icon h-icon__icon style-850-icon style-local-2637-c42-icon"><!--Icon by Font Awesome (https://fontawesome.com)-->
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="leaf" viewBox="0 0 1792 1896.0833">
+                <path d="M1280 704q0-26-19-45t-45-19q-172 0-318 49.5t-259.5 134T403 1043q-19 21-19 45 0 26 19 45t45 19q24 0 45-19 27-24 74-71t67-66q137-124 268.5-176t313.5-52q26 0 45-19t19-45zm512-198q0 95-20 193-46 224-184.5 383T1230 1350q-214 108-438 108-148 0-286-47-15-5-88-42t-96-37q-16 0-39.5 32t-45 70-52.5 70-60 32q-43 0-63.5-17.5T16 1459q-2-4-6-11t-5.5-10-3-9.5T0 1415q0-35 31-73.5t68-65.5 68-56 31-48q0-4-14-38t-16-44q-9-51-9-104 0-115 43.5-220t119-184.5 170.5-139T696 347q55-18 145-25.5t179.5-9 178.5-6 163.5-24T1476 226l29.5-29.5 29.5-28 27-20 36.5-16 43.5-4.5q39 0 70.5 46t47.5 112 24 124 8 96z" fill="#03a4ed"></path>
+                </svg>
+            </span>
             <h3>SUSTAINABILITY</h3>
             <p>Considering the environmental and social impact of software development practices and striving for sustainability in processes and products.</p>
         </div>
@@ -258,142 +267,6 @@
     <a href="https://www.linkedin.com/in/ashish-sahay-the-apexian/" target="_blank" h-use-smooth-scroll="true" class="image-link" rel="noopener">
         <img fetchpriority="high" decoding="async" width="1920" height="550px" src="https://ontoorsolutions.com/wp-content/uploads/2024/07/Teams-profile-1.png" class="wp-image-3864 style-1012-image style-local-2637-c51-image" alt="Team Pic">
     </a>
-</div>
-
-<div id="blog" class="our-blog section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-                <div class="section-heading">
-                    <h2>Check Out What Is <em>Trending</em> In Our Latest <span>News</span></h2>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
-                <div class="top-dec">
-                    <img src="assets/images/blog-dec.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-                <div class="left-image">
-                    <a href="#"><img src="assets/images/big-blog-thumb.jpg" alt="Workspace Desktop"></a>
-                    <div class="info">
-                        <div class="inner-content">
-                            <ul>
-                                <li><i class="fa fa-calendar"></i> 24 Mar 2021</li>
-                                <li><i class="fa fa-users"></i> TemplateMo</li>
-                                <li><i class="fa fa-folder"></i> Branding</li>
-                            </ul>
-                            <a href="#">
-                                <h4>SEO Agency &amp; Digital Marketing</h4>
-                            </a>
-                            <p>Lorem ipsum dolor sit amet, consectetur and sed doer ket eismod tempor incididunt ut labore et dolore
-                                magna...</p>
-                            <div class="main-blue-button">
-                                <a href="#">Discover More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
-                <div class="right-list">
-                    <ul>
-                        <li>
-                            <div class="left-content align-self-center">
-                                <span><i class="fa fa-calendar"></i> 18 Mar 2021</span>
-                                <a href="#">
-                                    <h4>New Websites &amp; Backlinks</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-                            </div>
-                            <div class="right-image">
-                                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left-content align-self-center">
-                                <span><i class="fa fa-calendar"></i> 14 Mar 2021</span>
-                                <a href="#">
-                                    <h4>SEO Analysis &amp; Content Ideas</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-                            </div>
-                            <div class="right-image">
-                                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left-content align-self-center">
-                                <span><i class="fa fa-calendar"></i> 06 Mar 2021</span>
-                                <a href="#">
-                                    <h4>SEO Tips &amp; Digital Marketing</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amsecteturii and sed doer ket eismod...</p>
-                            </div>
-                            <div class="right-image">
-                                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="contact" class="contact-us section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                <div class="section-heading">
-                    <h2>Feel Free To Send Us a Message About Your Website Needs</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doer ket eismod tempor incididunt ut labore
-                        et dolores</p>
-                    <div class="phone-info">
-                        <h4>For any enquiry, Call Us: <span><i class="fa fa-phone"></i> <a href="#">010-020-0340</a></span></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
-                <form id="contact" action="" method="post">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <fieldset>
-                                <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-6">
-                            <fieldset>
-                                <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required>
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
-                                    required="">
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <textarea name="message" type="text" class="form-control" id="message" placeholder="Message"
-                                    required=""></textarea>
-                            </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                            <fieldset>
-                                <button type="submit" id="form-submit" class="main-button ">Send Message</button>
-                            </fieldset>
-                        </div>
-                    </div>
-                    <div class="contact-dec">
-                        <img src="assets/images/contact-decoration.png" alt="">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 </div>
 @endsection
 

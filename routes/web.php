@@ -28,3 +28,6 @@ Route::get('/', [HomeController::class, 'home']);
 Route::get('/about-us', [AboutUsController::class, 'aboutUs']);
 Route::get('/our-vision', [AboutUsController::class, 'ourVision']);
 
+
+Route::view('/contact-us', 'user.pages.contact-us.contact-us');
+
