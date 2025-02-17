@@ -154,7 +154,7 @@
 </div>
 
 
-@include('user.include.contact');
+@include('user.include.contact')
 
 @endsection
 
